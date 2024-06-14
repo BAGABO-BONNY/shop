@@ -57,7 +57,7 @@ const Hero = () => {
                     <div>
                       <Button text="Shop By Category"
                       bgColor="bg-primary"
-                      textColor="text-White"
+                      textColor="text-white"
                       />
                      </div>
                   </div>
