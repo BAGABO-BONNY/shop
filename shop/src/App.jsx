@@ -7,6 +7,7 @@ import  Services from './components/Services/Services'
 import Banner from './components/Banner/Banner'
 import chair from './components/hero/ga.png'
 import Products from './components/Products/Products';
+import chair2 from './components/hero/bag.png'
 
 const BannerData ={
   discount:"30% OFF",
@@ -17,6 +18,16 @@ const BannerData ={
   title3:"Winter Sale",
   title4:"lorem ipsum, dolor sit amet consecteur",
   bgColor:"#f42c37",
+};
+const BannerData2 ={
+  discount:"30% OFF",
+  title:"Happy Hours",
+  date:"14 jan to 28 jan",
+  Image:chair2,
+  title2: "Accent Chair",
+  title3:"Winter Sale",
+  title4:"lorem ipsum, dolor sit amet consecteur",
+  bgColor:"#2dcc6f",
 };
 const App = () => {
   
@@ -29,6 +40,7 @@ const App = () => {
       <Services/>
       <Banner data ={BannerData}/>
       <Products/>
+      <Banner data={BannerData2}/>
     </div>
   );
 };

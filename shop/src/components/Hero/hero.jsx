@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import Image1 from "./bag.png";
+import Image1 from "./ga.png";
 import Image2 from "./lau.png";
 import Image3 from "./nny.png";
 import  Button from"../shared/Button";
@@ -67,7 +67,7 @@ const Hero = () => {
                       <img
                         src={data.img}
                         alt=""
-                        className="w-[300px]  h-[300px] sm:h-[450px] sm:scale-110 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40"
+                        className="w-[500px]  h-[400px] sm:h-[450px] sm:scale-110 lg:scale-110 object-contain mx-auto drop-shadow-[-8px_4px_6px_rgba(0,0,0,.4)] relative z-40"
                       />
                     </div>
                   </div>
