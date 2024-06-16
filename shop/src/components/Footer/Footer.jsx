@@ -33,7 +33,7 @@ const Footer = () => {
             >
               FSHOP
             </a>
-            <p className="text-gray-600 hover:text-white/70 lg:pr-24 pt-3">
+            <p className="text-gray-600 hover:text-black/90 lg:pr-24 pt-3">
               Welcome to FSHOP, your ultimate destination for stylish and
               affordable furniture. Whether you’re looking to revamp your living
               room, upgrade your bedroom.
