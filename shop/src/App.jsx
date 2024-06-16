@@ -9,6 +9,7 @@ import chair from './components/hero/ga.png'
 import Products from './components/Products/Products';
 import chair2 from './components/hero/bag.png'
 import Blogs from './components/Blogs/Blogs';
+import Footer from './components/Footer/Footer';
 
 const BannerData ={
   discount:"30% OFF",
@@ -43,6 +44,7 @@ const App = () => {
       <Products/>
       <Banner data={BannerData2}/>
       <Blogs/>
+      <Footer/>
     </div>
   );
 };

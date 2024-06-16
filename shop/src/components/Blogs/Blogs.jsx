@@ -26,16 +26,17 @@ const BlogData =[
 ]
 const Blogs = () => {
   return (
-    <div>
+    <div my-12>
         <div className='container'>
         <Heading title="Recent News" subtitle ={"Explore Our Blogs"} />
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap gap-y-8 sm:gap- md:gap'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7 mb-5'>
             {
                 BlogData.map((data) =>(
-                    <div><div>
-                        <img src={data.Image} alt="" className='w-full h-[220px] object-cover'/>
+                    <div key={data.title} className='bg-white  dark:bg-gray-900'>
+                        <div className='over-flow-hidden rounded-2xl mb-8'>
+                        <img src={data.Image} alt="" className='w-full h-[220px] object-cover rounded-2xl hover:scale-105 duration-500 '/>
                         </div>
-                        <div>
+                        <div className='space-y-2'>
                             <p className='text-xs text-gray-500'>{data.published}</p>
                             <p className='font-bold line-clamp-1'>{data.title}</p>
                             <p className='line-clamp-2 text-sm text-gray-600 dark:text-gray-400'>{data.subtitle}</p>
@@ -49,4 +50,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default Blogs;
