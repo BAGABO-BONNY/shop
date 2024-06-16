@@ -28,7 +28,7 @@ const HeroSlide = [
     title2: "Furniture",
   },
 ];
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
   const settings = {
     dots: false,
     arrows: false,
