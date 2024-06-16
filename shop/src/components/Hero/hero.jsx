@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import Image1 from "./ga.png";
 import Image2 from "./lau.png";
 import Image3 from "./nny.png";
 import Button from "../shared/Button";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const HeroSlide = [
   {
@@ -30,6 +32,10 @@ const HeroSlide = [
 ];
 
 const Hero = ({ handleOrderPopup }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const settings = {
     dots: false,
     arrows: false,
@@ -37,7 +43,7 @@ const Hero = ({ handleOrderPopup }) => {
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Ensure autoplay is set to true
+    autoplay: true,
     autoplaySpeed: 4000,
     cssEase: "ease-in-out",
     pauseOnHover: false,
@@ -74,14 +80,16 @@ const Hero = ({ handleOrderPopup }) => {
                       data-aos="zoom-out"
                       data-aos-duration="500"
                       data-aos-once="true"
-                      className="text-5xl uppercase text-white dark:text-white/5 sm:text-[80px] md:text-[100px] xl:text-[150px] font-bold"
+                      className="text-5xl uppercase text-white dark:text-white/50 sm:text-[80px] md:text-[100px] xl:text-[150px] font-bold"
                     >
                       {data.title2}
                     </h1>
-                    <div data-aos="fade-up"
-                     data-aos-offset="0"
-                     data-aos-duration="500"
-                     data-aos-delay="300">
+                    <div
+                      data-aos="fade-up"
+                      data-aos-offset="0"
+                      data-aos-duration="500"
+                      data-aos-delay="300"
+                    >
                       <Button
                         text="Shop By Category"
                         bgColor="bg-primary"

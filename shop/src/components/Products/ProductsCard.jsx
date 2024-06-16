@@ -1,33 +1,20 @@
-import React from "react";
-import Button from "../shared/Button";
+import React from 'react';
 
 const ProductsCard = ({ data }) => {
   return (
-    <div className="mb-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 place-items-center">
-        {data && data.map((item, index) => (
-          <div className="group" key={index}>
-            <div  className="relative">
-              <img
-                src={item.img}
-                alt={item.title}
-                className="bg-gray-200 h-[320px] w-[260px] object-cover rounded-md"
-              />
-              <div className=" hidden group-hover:flex absolute top-1/2  -translate-y-1/2 left-1/2 -translate-x-1/2 h-full w-full text-center group-hover:backdrop-blur-sm justify-center items-center duration-200">
-                <Button
-                  text={"Add to cart"}
-                  bgColor={"bg-primary"}
-                  textColor={"text-white"}
-                />
-              </div>
-            </div>
-            <div className="leading-7 mt-2">
-              <h2 className="font-semibold">{item.title}</h2>
-              <h2 className="font-bold">${item.price}</h2>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
+      {data.map((product) => (
+        <div
+          key={product.id}
+          className='p-6 bg-white rounded-lg shadow-md'
+          data-aos="fade-up"
+          data-aos-delay={product.aosDelay}
+        >
+          <img src={product.img} alt={product.title} className='w-full h-40 object-cover mb-4' />
+          <h2 className='text-xl font-bold mb-2'>{product.title}</h2>
+          <p className='text-gray-600'>${product.price}</p>
+        </div>
+      ))}
     </div>
   );
 };

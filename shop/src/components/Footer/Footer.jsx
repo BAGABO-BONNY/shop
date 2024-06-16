@@ -1,5 +1,5 @@
 import React from "react";
-import { FaMobileAlt } from "react-icons/fa";
+import { FaMobileAlt, FaExternalLinkAlt } from "react-icons/fa";
 import { FaFacebook, FaLinkedin, FaLocationArrow } from "react-icons/fa6";
 
 const FooterLinks = [
@@ -43,9 +43,10 @@ const Footer = () => {
               href="https://github.com/BAGABO-BONNY"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-primary/90 text-white py-2 px-4 mt-4 text-sm rounded-full"
+              className=" bg-primary/90 text-white py-2 px-2 mt-4 text-sm rounded-full flex items-center"
             >
               Visit our GitHub Account
+              <FaExternalLinkAlt className="ml-1" />
             </a>
           </div>
           <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:pl-10">
@@ -84,19 +85,27 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <FaLocationArrow className="text-gray-600 dark:text-white" />
-                  <p className="text-gray-600 dark:text-white">Nyagatare, Eastern Province, Rwanda</p>
+                  <p className="text-gray-600 dark:text-white">
+                    Nyagatare, Eastern Province, Rwanda
+                  </p>
                 </div>
-                <div className="flex items-center gap-3 mt-6" >
+                <div className="flex items-center gap-3 mt-6">
                   <FaMobileAlt className="text-gray-600 dark:text-white" />
                   <p className="text-gray-600 dark:text-white">+0788837128</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <a href="https://www.facebook.com/profile.php?id=61555186797204"> 
-                <FaFacebook  className="text-3xl hover:text-primary duration-300 mt-5"/>
+              <div className="flex items-center gap-4 mt-5">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61555186797204"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook className="text-3xl hover:text-primary duration-300" />
                 </a>
-                <a href="https://www.linkedin.com/in/bagabo-bonny-88057b2a0/"> 
-                <FaLinkedin  className="text-3xl hover:text-primary duration-300 mt-5"/>
+                <a
+                  href="https://www.linkedin.com/in/bagabo-bonny-88057b2a0/"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedin className="text-3xl hover:text-primary duration-300" />
                 </a>
               </div>
             </div>
